@@ -1,2 +1,2 @@
 # ZWay2ioBroker
-Get your Z-Way vDevices into ioBroker
+Mit Hilfe dieser Skripte und Vorlagen kannst du deine Geräte aus ZWay auch in ioBroker benutzen.
