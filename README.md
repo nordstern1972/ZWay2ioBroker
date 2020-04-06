@@ -2,6 +2,7 @@
 Mit Hilfe dieser Skripte und Vorlagen kannst du deine "vDevices" aus ZWay auch in ioBroker benutzen.
 
 - ZWayVorbereitung.js
+
 Mit diesem Skript werden benötigte Datenpunkte in ioBroker angelegt.
   
 todo:
