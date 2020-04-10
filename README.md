@@ -8,9 +8,12 @@ Mit diesem Skript werden benötigte Datenpunkte in ioBroker angelegt.
 - ZWayHoleDevice.js
 
 Mit diesem Skript werden minütlich alle vDevice-Daten von ZWay abgeholt. Gibt es das vDevice noch nicht, werden entsprechende Datenpukte in ioBroker angelegt und die Werte gespeichert. Ist der Datenpunkt vorhanden werden die Daten aktualisiert. Das Skript ZWayVorbereitung muss vorher einmal durchgelaufen sein und in den Datenpunkten müssen die passenden Verbindungsdaten von ZWay eingetragen sein.
-  
-todo:
+
 - ZWaySendeAnDevice.js
+
+Dieses Skript überprüft das Kommando welches an ein vDevice zu ZWay gesendet werden soll. Ist das Kommando erlaubt, wird es an den ZWay-Server gesendet.
+
+todo:
 - ZWaySendeAnDeviceIntervall.js
 - ZWayEmpfangVonDevice.js
 
