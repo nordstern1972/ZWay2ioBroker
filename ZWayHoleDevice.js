@@ -12,12 +12,12 @@ schedule('* * * * *', function () {
     request.get(zway_url.val + '/ZAutomation/api/v1/devices?since=' + timestamp.val, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                if(getState('ZwayLog').val==1){
-                    log('Status: ' + response.statusCode);
-                }
                 let result = JSON.parse(response.body);
                 if(getState('ZwayLog').val==1){
                     log('Anzahl: ' + result.data.devices.length);
+                }
+                if(getState('ZwayLog').val==1){
+                    log('Strukturänderung: ' + result.data.structureChanged);
                 }
                 for(let i=0;i<result.data.devices.length;i++){
                     jsonRunner(result.data.devices[i], dp_namespace.val + '.' + result.data.devices[i].id);
