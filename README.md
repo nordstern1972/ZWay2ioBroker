@@ -14,7 +14,7 @@ Mit diesem Skript werden benötigte Datenpunkte in ioBroker angelegt. Die DPs mi
 
 ### ZWayHoleDevice.js
 
-Mit diesem Skript werden zyklisch(Default: jede Minute) alle vDevice-Daten von ZWay abgeholt. Gibt es das vDevice noch nicht im Objektbaum von ioBroker, werden entsprechende Datenpukte angelegt und die Werte gespeichert. Ist der Datenpunkt vorhanden werden die Daten nur aktualisiert. Das Skript ZWayVorbereitung muss vorher einmal durchgelaufen sein und in den Datenpunkten müssen die passenden Verbindungsdaten für den ZWay-Server eingetragen sein.
+Mit diesem Skript werden zyklisch(Default: jede Minute) alle vDevice-Daten seit dem Zeitpunkt "LetzteAbfrage" vom ZWay-Server abgeholt. Gibt es das vDevice noch nicht im Objektbaum von ioBroker, werden entsprechende Datenpunkte angelegt und die Werte gespeichert. Ist der Datenpunkt vorhanden werden die Daten nur aktualisiert. Das Skript ZWayVorbereitung muss vorher einmal durchgelaufen sein und in den Datenpunkten müssen die passenden Verbindungsdaten für den ZWay-Server eingetragen sein. Die Daten sind als "Read-Only" zu betrachten. Eine direkte Manipulation eines Datenpunktes in ioBroker bewirkt **keine** Änderung am vDevice im ZWay-Server. Dafür ist das Skript "ZwaySendeAnDevice" zuständig.
 
 ### ZWaySendeAnDevice.js
 
@@ -22,7 +22,7 @@ Dieses Skript überprüft das Kommando welches an ein vDevice zu ZWay gesendet w
 
 ### ZWayEmpfangVonDevice.js
 
-Möchte man bestimmte Ereignisse/Ergebnisse aus ZWay unmittelbar bei Änderung in ioBroker zur Verfügung haben und nicht auf die minütlichen Abfrage von "ZWayHoleDevice.js" warten, besteht die Möglichkeit im ZWay-Server die App "HTTP-Bridge" zu installieren und die Daten von angegebenen vDevices an den ioBroker senden zu lassen. Die Daten werden in einem bestimmten JSON-Format gesendet und mit dem node.js HTTP-Server und Express angenommen, ausgewertet und in die entsprechenden Datenpunkte gespeichert. Der HTTP-Server sollte im ioBroker bereits installiert sein. Express muss eventuell nachinstalliert werden. Bitte hier den Installations-/Verwendungsanweisungen von ioBroker/npm folgen.
+Möchte man bestimmte Ereignisse/Werte aus ZWay unmittelbar bei Änderung in ioBroker zur Verfügung haben und nicht auf die zyklische(minütlichen) Abfrage von "ZWayHoleDevice.js" warten, besteht die Möglichkeit im ZWay-Server die App "HTTP-Bridge" zu installieren und die Daten von angegebenen vDevices an den ioBroker senden zu lassen. Die Daten werden in einem bestimmten JSON-Format gesendet und mit dem node.js HTTP-Server und Express angenommen, ausgewertet und in die entsprechenden Datenpunkte gespeichert. Der HTTP-Server sollte im ioBroker bereits installiert sein. Express muss eventuell nachinstalliert werden. Bitte hier den Installations-/Verwendungsanweisungen von ioBroker/npm folgen.
 
 todo:
 - Beispiele
