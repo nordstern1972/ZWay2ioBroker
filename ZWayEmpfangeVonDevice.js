@@ -4,7 +4,7 @@ let j               = 0;
 let dp_array1       = new Array();
 let dp_array2       = new Array();
 let dp_string       = '';
-let dp_namespace    = getState('ZwayNamesraum');
+let dp_namespace    = getState('ZwayNamensraum');
 let dp_Port         = getState('ZwayPort').val;
 
 const http          = require('http');

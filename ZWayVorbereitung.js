@@ -8,12 +8,12 @@ else{
     log('ZwayLetzteAbfrage vorhanden');
 }
 
-if(!existsState('ZwayNamesraum')){
-    createState('ZwayNamesraum','', {read: true, write: true, desc: "Namesraum für die Devices", type: "string", def: "ZWay"});
-    log('ZwayNamesraum erstellt');
+if(!existsState('ZwayNamensraum')){
+    createState('ZwayNamensraum','', {read: true, write: true, desc: "Namensraum für die Devices", type: "string", def: "ZWay"});
+    log('ZwayNamensraum erstellt');
 }
 else{
-    log('ZwayNamesraum vorhanden');
+    log('ZwayNamensraum vorhanden');
 }
 
 if(!existsState('ZwayBenutzer')){

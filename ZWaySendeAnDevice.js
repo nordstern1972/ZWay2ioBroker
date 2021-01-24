@@ -110,7 +110,7 @@ function setDevice (ZwayId, ZwayCommand){
     let zway_url       = getState('ZwayUrl');
     let zway_user      = getState('ZwayBenutzer');
     let zway_pass      = getState('ZwayPasswort');
-    let zway_namespace = getState('ZwayNamesraum');
+    let zway_namespace = getState('ZwayNamensraum');
 
     if(checkCommand(zway_namespace.val + '.' + ZwayId, ZwayCommand)){
         request.get(zway_url.val + '/ZAutomation/api/v1/devices/' + ZwayId + '/command/' + ZwayCommand, 

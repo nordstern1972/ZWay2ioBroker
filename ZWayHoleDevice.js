@@ -5,7 +5,7 @@ schedule('* * * * *', function () {
     let j            = 0;
     let timestamp    = getState('ZwayLetzteAbfrage');
     let zway_url     = getState('ZwayUrl');
-    let dp_namespace = getState('ZwayNamesraum');
+    let dp_namespace = getState('ZwayNamensraum');
     let zway_user    = getState('ZwayBenutzer');
     let zway_pass    = getState('ZwayPasswort');
 
